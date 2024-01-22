@@ -7,7 +7,7 @@ public class NewBehaviourScript : MonoBehaviour
 
 
 {
-    public GameObject player;
+    public GameObject Player;
     public float speed;
     private float distence;
     // Start is called before the first frame update
@@ -16,15 +16,14 @@ public class NewBehaviourScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+     void Update ()
     {
-        distence = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direction = player.transform.forward - transform.position;
+        distence = Vector2.Distance(transform.position, Player.transform.position);
+        Vector2 direction = Player.transform.forward - transform.position;
       
 
         
-      transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+      transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
           
         
     }
