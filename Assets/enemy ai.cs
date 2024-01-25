@@ -7,8 +7,7 @@ public class EnemyAi : MonoBehaviour
 {
 
     [SerializeField]Transform target;
-    [SerializeField]
-    private float _playerAwarenessDistance;
+   
 
 
     NavMeshAgent agent;
@@ -20,7 +19,7 @@ public class EnemyAi : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
-        Player = GameObject.Find("Player");
+       
     }
 
 
@@ -32,10 +31,9 @@ public class EnemyAi : MonoBehaviour
     {
         agent.SetDestination(target.position);
 
-        gameObject.GetComponent<NavMeshAgent>().enabled = false;
-        if ((player.transform.position - this.transform.position).sqrMagnitude < 3 * 3) ;
-        {
-            gameObject.GetComponent<NavMeshAgent>().enabled = true;
-        }
+      
     }
+
+   
 }
+
