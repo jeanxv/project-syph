@@ -10,13 +10,17 @@ public class NewBehaviourScript1 : MonoBehaviour
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     Vector2 movement;
-
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetAxisRaw("horizontal");
+        movement.y = Input.GetAxisRaw("vertical");
+
+        animator.SetFloat("horizontal",movement.x);
+        animator.SetFloat("vertical", movement.y);
+        animator.SetFloat("speed", movement.sqrMagnitude);
 
     }
 
