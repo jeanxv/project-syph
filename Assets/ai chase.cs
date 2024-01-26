@@ -16,7 +16,8 @@ public class NewBehaviourScript : MonoBehaviour
         
     }
 
-     void Update ()
+    // Update is called once per frame
+    void Update()
     {
         distence = Vector2.Distance(transform.position, Player.transform.position);
         Vector2 direction = Player.transform.forward - transform.position;

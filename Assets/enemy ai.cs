@@ -7,6 +7,8 @@ public class EnemyAi : MonoBehaviour
 {
 
     [SerializeField]Transform target;
+   
+
 
     NavMeshAgent agent;
 
@@ -16,11 +18,22 @@ public class EnemyAi : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+       
     }
+
+
+
+
 
     // Update is called once per frame
     void Update()
     {
         agent.SetDestination(target.position);
+
+      
     }
+
+   
 }
+
