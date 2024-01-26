@@ -25,28 +25,54 @@ BlendTree:
     m_DirectBlendParameter: 'horizontal '
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 785b2ee9fee525e46ab1385a3b5465f6, type: 2}
+    m_Motion: {fileID: 7400000, guid: ecc1c2896f2725f499c35afceb841d20, type: 2}
     m_Threshold: 7
-    m_Position: {x: 0.06, y: 0.97}
+    m_Position: {x: 0, y: -1}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: 'horizontal '
+    m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 7ba6e4fb9559697459beddacc1465687, type: 2}
+    m_Motion: {fileID: 7400000, guid: ae0a68e9ebcfb1042a770ec512f48ecc, type: 2}
     m_Threshold: 9
-    m_Position: {x: -0.04, y: -1.19}
+    m_Position: {x: 0, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: 'horizontal '
+    m_DirectBlendParameter: Horizontal
     m_Mirror: 0
-  m_BlendParameter: 'horizontal '
-  m_BlendParameterY: 'vertical '
+  m_BlendParameter: Horizontal
+  m_BlendParameterY: Vertical
   m_MinThreshold: 3
   m_MaxThreshold: 9
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!1102 &-2555589931047558586
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: back walk
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: ae0a68e9ebcfb1042a770ec512f48ecc, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -56,13 +82,13 @@ AnimatorController:
   m_Name: REAPER SPRITE
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: 'horizontal '
+  - m_Name: Horizontal
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: 'vertical '
+  - m_Name: Vertical
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -127,6 +153,12 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 8404396858154072879}
     m_Position: {x: 50, y: 290, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -2555589931047558586}
+    m_Position: {x: 85, y: 355, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 8780996521197081011}
+    m_Position: {x: 120, y: 420, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -211,6 +243,32 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 7ba6e4fb9559697459beddacc1465687, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &8780996521197081011
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: front walk
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: ecc1c2896f2725f499c35afceb841d20, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
