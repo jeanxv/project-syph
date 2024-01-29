@@ -5880,6 +5880,7 @@ GameObject:
   - component: {fileID: 740750523}
   - component: {fileID: 740750524}
   - component: {fileID: 740750525}
+  - component: {fileID: 740750526}
   m_Layer: 0
   m_Name: REAPER SPRITE
   m_TagString: Player
@@ -5989,6 +5990,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0.03840579, y: 0.046086006}
   m_Size: {x: 1.0936369, y: 2.9078288}
   m_Direction: 0
+--- !u!95 &740750526
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740750522}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c22678328f4e814bb19d13eacca996c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &760981318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11068,9 +11090,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1425251540}
   - component: {fileID: 1425251539}
-  - component: {fileID: 1425251538}
   - component: {fileID: 1425251541}
   - component: {fileID: 1425251542}
+  - component: {fileID: 1425251543}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -11078,20 +11100,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1425251538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425251537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38ab6fd13354e03488ded64e1be84067, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 1425251541}
 --- !u!212 &1425251539
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11234,6 +11242,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
+--- !u!114 &1425251543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425251537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ab6fd13354e03488ded64e1be84067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  rb: {fileID: 1425251541}
+  animator: {fileID: 740750526}
 --- !u!1 &1434664478 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7286870094121726599, guid: a7535c7d6d819344ba693faf0eed0b96, type: 3}
