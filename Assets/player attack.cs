@@ -43,6 +43,7 @@ public class playerattack : MonoBehaviour
     private void Attack ()
     {
         attacking = true;
+
         attackArea.SetActive(attacking);
     }
 }
