@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class health2 : MonoBehaviour
+public class Health : MonoBehaviour
 {
-    [SerializeField] private int health = 30;
+    [SerializeField] private int health = 100;
     private int MAX_HEALTH = 100;
 
 
@@ -17,9 +17,9 @@ public class health2 : MonoBehaviour
      
     public void Damage (int amount)
     {
-        if (amount > 0)
+        if (amount < 0)
         {
-            throw new System.ArgumentOutOfRangeException("Can not have negavive damage ");
+            throw new System.ArgumentOutOfRangeException("Cannot have negavive damage");
         }
 
         this.health -= amount;
@@ -28,19 +28,18 @@ public class health2 : MonoBehaviour
         {
             Die();
         }
-
     }
 
     public void Heal(int amount)
     {
         if (amount<0)
         {
-            throw new System.ArgumentOutOfRangeException("can not have negavtive healing");
+            throw new System.ArgumentOutOfRangeException("cannot have negavtive healing");
         }
 
-        bool wouldBeOverMaxHealth = health + amount > MAX_HEALTH;
+        bool wouldBeOverMaxHealth = health + amount < MAX_HEALTH;
        
-        if (health + amount > MAX_HEALTH)
+        if (wouldBeOverMaxHealth)
         {
             this.health = MAX_HEALTH;
 

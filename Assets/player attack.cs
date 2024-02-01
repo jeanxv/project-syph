@@ -10,7 +10,7 @@ public class playerattack : MonoBehaviour
     
         private bool attacking = false;
 
-    private float timeToAttack = 0.25f;
+    private float timeToAttack = 0f;
     private float timer = 0f;
 
     // Start is called before the first frame update
@@ -35,7 +35,7 @@ public class playerattack : MonoBehaviour
             {
                 timer = 0;
                 attacking = false;
-                attackArea.SetActive(attacking);
+                attackArea.SetActive( attacking);
             }
             
         }
