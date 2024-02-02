@@ -22,7 +22,7 @@ public class twiddle : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, attackRange, targetLayer))
             {
-                Health health = hit.collider.GetComponent<Health>();
+                health2 health = hit.collider.GetComponent<health2>();
                 if (health != null)
                 {
                     health.Damage(damage);

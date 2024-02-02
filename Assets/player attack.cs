@@ -8,7 +8,7 @@ public class playerattack : MonoBehaviour
 {
     private GameObject attackArea = default; 
     
-        private bool attacking = false;
+        private bool attacking = true;
 
     private float timeToAttack = 0f;
     private float timer = 0f;

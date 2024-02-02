@@ -4,33 +4,37 @@ using UnityEngine;
 
 public class PlayerAwarenessController : MonoBehaviour
 {
-    public bool AwareOfPlayer { get; private set; }
 
-    public Vector2 DirectionToPlayer { get; private set; }
 
-    [SerializeField]
-    private float _playerAwarenessDistance;
-
-    private Transform _player;
-
-    private void Awake()
+    public class Player : MonoBehaviour
     {
-        _player = FindObjectOfType<PlayerAwarenessController>().transform;
-    }
+        public float attackRange = 1f; // Adjust as needed
+        public LayerMask enemyLayer; // Set in the inspector to the layer where enemies are
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector2 enemyToPlayerVector = _player.position - transform.position;
-        DirectionToPlayer = enemyToPlayerVector.normalized;
-
-        if (enemyToPlayerVector.magnitude <= _playerAwarenessDistance)
+        private void Update()
         {
-            AwareOfPlayer = true;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Attack();
+            }
         }
-        else
+
+        private void Attack()
         {
-            AwareOfPlayer = false;
+            Collider[] hitEnemies = Physics.OverlapBox(transform.position, new Vector3(attackRange, attackRange, attackRange), Quaternion.identity, enemyLayer);
+
+            foreach (Collider enemy in hitEnemies)
+            {
+                // Assuming enemy script has a Kill method
+                enemy.GetComponent<kill>().Kill();
+            }
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(transform.position, new Vector3(attackRange, attackRange, attackRange));
         }
     }
 }
+
