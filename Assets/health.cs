@@ -11,17 +11,23 @@ public class health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = 10;
+        currentHealth = 100;
     }
-    public void Attack (int amaount)
+    public void Damage (int amaount)
     {
-        currentHealth -= 3;
+        currentHealth -= 50;
 
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
         }
-    }
+        
+
+       
+           
+
+
+    } 
     // Update is called once per frame
     public void Heal(int amaount)
     {
@@ -30,9 +36,15 @@ public class health : MonoBehaviour
         {
             currentHealth = MaxHealth;
         }
+        
 
     }
+
+
+
+
 }
+
 
 
 

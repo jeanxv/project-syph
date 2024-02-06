@@ -6,36 +6,41 @@ using UnityEngine;
 public class playerattack : MonoBehaviour
 
 {
-    private GameObject attackArea = default; 
-    
-        private bool attacking = true;
+    private GameObject attackArea = default;
 
-    private float timeToAttack = 0f;
+    private bool attacking = false;
+
+    private float timeToAttack = 0.25f;
     private float timer = 0f;
+    private BoxCollider box;
 
     // Start is called before the first frame update
     void Start()
     {
-        attackArea = transform.GetChild(0).gameObject;  
+        attackArea = transform.GetChild(0).gameObject; 
+        box = GetComponent<BoxCollider>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Space)) 
-        {
-            Attack();
-        }
+        
 
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            box.enabled = !box.enabled;
+        }
         if (attacking)
         {
             timer += Time.deltaTime;
              
             if (timer >=timeToAttack)
             {
-                timer = 0;
+                timer = 1;
+
                 attacking = false;
-                attackArea.SetActive( attacking);
+                attackArea.SetActive(attacking);
             }
             
         }
