@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class attackarea : MonoBehaviour
+public class attackArea : MonoBehaviour
 {
-    private int damage = 40;
+    private int damage = 20;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

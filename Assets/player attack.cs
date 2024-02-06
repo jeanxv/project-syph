@@ -19,6 +19,7 @@ public class playerattack : MonoBehaviour
     {
         attackArea = transform.GetChild(0).gameObject; 
         box = GetComponent<BoxCollider>();
+       
         
     }
 
@@ -30,6 +31,7 @@ public class playerattack : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             box.enabled = !box.enabled;
+            
         }
         if (attacking)
         {
@@ -40,7 +42,7 @@ public class playerattack : MonoBehaviour
                 timer = 1;
 
                 attacking = false;
-                attackArea.SetActive(attacking);
+                
             }
             
         }
