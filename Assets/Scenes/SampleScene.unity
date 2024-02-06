@@ -4976,6 +4976,7 @@ GameObject:
   - component: {fileID: 625713803}
   - component: {fileID: 625713802}
   - component: {fileID: 625713801}
+  - component: {fileID: 625713809}
   m_Layer: 3
   m_Name: Capsule (5)
   m_TagString: Untagged
@@ -5166,14 +5167,28 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625713800}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.2, y: 8.9, z: -104.537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -68.8, y: -19.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 1377128393}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &625713809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625713800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967fc42eee59b804c9a948d47ddbb4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1425251540}
+  activationDistance: 10
 --- !u!1 &640301427 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 514505497100524296, guid: 026e505e0da01a448a2eabf0efbacd26, type: 3}
@@ -7128,6 +7143,7 @@ GameObject:
   - component: {fileID: 900462372}
   - component: {fileID: 900462371}
   - component: {fileID: 900462370}
+  - component: {fileID: 900462378}
   m_Layer: 3
   m_Name: Capsule (1)
   m_TagString: Untagged
@@ -7318,14 +7334,28 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900462369}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.7, y: 88.6, z: -104.537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -75.3, y: 60.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 1377128393}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &900462378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900462369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967fc42eee59b804c9a948d47ddbb4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1425251540}
+  activationDistance: 10
 --- !u!1 &906630580
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,6 +7431,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fb8cfd9bed8644899e0a97f4e8cbdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_OverrideByGrid: 0
+  m_UseMeshPrefab: {fileID: 0}
+  m_CompressBounds: 0
+  m_OverrideVector: {x: 1, y: 1, z: 1}
 --- !u!1 &906944398 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 514505497100524296, guid: 026e505e0da01a448a2eabf0efbacd26, type: 3}
@@ -8911,6 +8945,7 @@ GameObject:
   - component: {fileID: 1029468408}
   - component: {fileID: 1029468407}
   - component: {fileID: 1029468406}
+  - component: {fileID: 1029468414}
   m_Layer: 3
   m_Name: Capsule (4)
   m_TagString: Untagged
@@ -9101,14 +9136,28 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029468405}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 34.4, z: -104.537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.6, y: 6.300001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 1377128393}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1029468414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029468405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967fc42eee59b804c9a948d47ddbb4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1425251540}
+  activationDistance: 10
 --- !u!1 &1054913728
 GameObject:
   m_ObjectHideFlags: 0
@@ -10689,6 +10738,7 @@ GameObject:
   - component: {fileID: 1301038077}
   - component: {fileID: 1301038076}
   - component: {fileID: 1301038075}
+  - component: {fileID: 1301038083}
   m_Layer: 3
   m_Name: Capsule (2)
   m_TagString: Untagged
@@ -10879,14 +10929,28 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301038074}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -65.5, y: -5.9, z: -104.537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -94.1, y: -34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 1377128393}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1301038083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301038074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967fc42eee59b804c9a948d47ddbb4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1425251540}
+  activationDistance: 10
 --- !u!1001 &1327651746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11862,6 +11926,7 @@ GameObject:
   - component: {fileID: 1377128388}
   - component: {fileID: 1377128394}
   - component: {fileID: 1377128395}
+  - component: {fileID: 1377128396}
   m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
@@ -12029,7 +12094,12 @@ Transform:
   m_LocalPosition: {x: 28.6, y: 28.1, z: -104.537}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 900462377}
+  - {fileID: 1301038082}
+  - {fileID: 1603394037}
+  - {fileID: 1029468413}
+  - {fileID: 625713808}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12060,6 +12130,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &1377128396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377128387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967fc42eee59b804c9a948d47ddbb4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1425251540}
+  activationDistance: 5
 --- !u!1001 &1386646954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14210,6 +14294,7 @@ GameObject:
   - component: {fileID: 1603394032}
   - component: {fileID: 1603394031}
   - component: {fileID: 1603394030}
+  - component: {fileID: 1603394038}
   m_Layer: 3
   m_Name: Capsule (3)
   m_TagString: Untagged
@@ -14400,14 +14485,28 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603394029}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 75.1, z: -104.537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -31.6, y: 47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 1377128393}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1603394038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603394029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967fc42eee59b804c9a948d47ddbb4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1425251540}
+  activationDistance: 10
 --- !u!1 &1606131232
 GameObject:
   m_ObjectHideFlags: 0

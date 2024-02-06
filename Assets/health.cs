@@ -15,7 +15,7 @@ public class health : MonoBehaviour
     }
     public void Damage (int amaount)
     {
-        currentHealth -= 50;
+        currentHealth -= 20;
 
         if (currentHealth <= 0)
         {

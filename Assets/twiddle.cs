@@ -2,32 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class twiddle : MonoBehaviour
+
+using UnityEngine.AI;
+
+public class ActivateNavMeshAgent : MonoBehaviour
 {
-    public float attackRange = 2f;
-    public LayerMask targetLayer;
-    public KeyCode keyCode = KeyCode.E;
-    public int damage = 10;
-    // Start is called before the first frame update
+    public Transform Player; // Reference to the player GameObject
+    public float activationDistance = 5f; // Distance at which the NavMeshAgent should activate
+
+    private NavMeshAgent navMeshAgent;
+    private bool activated = false;
+
     void Start()
     {
-      
+        // Get the NavMeshAgent component
+        navMeshAgent = GetComponent<NavMeshAgent>();
+
+        // Disable the NavMeshAgent initially
+        navMeshAgent.enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(keyCode))
+        // Check if the player is within activationDistance
+        if (!activated && Vector3.Distance(transform.position, Player.position) <= activationDistance)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, attackRange, targetLayer))
-            {
-                health2 health = hit.collider.GetComponent<health2>();
-                if (health != null)
-                {
-                    health.Damage(damage);
-                }
-            }
+            // Activate the NavMeshAgent
+            navMeshAgent.enabled = true;
+            activated = true;
+        }
+        else if (activated && Vector3.Distance(transform.position, Player.position) > activationDistance)
+        {
+            // Deactivate the NavMeshAgent
+            navMeshAgent.enabled = false;
+            activated = false;
         }
     }
 }
+
