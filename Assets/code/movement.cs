@@ -11,7 +11,7 @@ public class NewBehaviourScript1 : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movement;
     public Animator animator;
-
+    public collectable cl;
     // Update is called once per frame
     void Update()
     {
@@ -27,7 +27,8 @@ public class NewBehaviourScript1 : MonoBehaviour
      void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-    }
 
+    }
    
+
 }

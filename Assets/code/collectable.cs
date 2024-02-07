@@ -6,15 +6,14 @@ using UnityEngine.UI;
 public class collectable : MonoBehaviour
 {
     private int items = 0;
-    [SerializeField] private Text itemText;
+    [SerializeField] private Text itemsText;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("items"))
         {
             Destroy(collision.gameObject);
             items++;
-            Debug.Log("items" +  items);
-            itemText.text = "item"+ items;
+            itemsText.text = "items:"+ items;
         }
     }
 }
