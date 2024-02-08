@@ -6,26 +6,50 @@ using UnityEngine.UI;
 
 public class TextOnCollision : MonoBehaviour
 {
-    public Text displayText; // Reference to the UI text element
 
-    private void OnTriggerEnter(Collider other)
+    public Text displaytext;
+    public float time = 3f;
+    private bool isDisplay = false;
+    private float displaytime = 0f;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player")) // Check if the collider belongs to the player
+       
+
+        if (collision.CompareTag("plush")) // Check if the collider belongs to the player
         {
-            displayText.text = "i like pancakes "; // Change the text
-            displayText.gameObject.SetActive(true); // Make the text visible
+            displaytext.text = "20 year iv been trap in here"; // Change the text
+            displaytext.gameObject.SetActive(true); // Make the text visible
+            isDisplay = true;
+
         }
+
     }
 
+    private void Update()
+    {
+        if (isDisplay)
+        {
+            displaytime += Time.deltaTime;
+            if (displaytime >= time)
+            {
+                displaytext.gameObject.SetActive(false);
+                displaytime = 0f;
+                isDisplay = false;
+            }
+        }
+    }                      
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player")) // Check if the collider belongs to the player
+        if (other.CompareTag("plush")) // Check if the collider belongs to the player
         {
-            displayText.gameObject.SetActive(false); // Hide the text when player exits the collider
+            displaytext.gameObject.SetActive(false); // Hide the text when player exits the collider
+            isDisplay = false;
+            displaytime = 0f;
+
         }
     }
-}
 
+}
 
 
 

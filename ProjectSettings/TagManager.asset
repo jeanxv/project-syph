@@ -6,6 +6,7 @@ TagManager:
   tags:
   - enemy
   - items
+  - plush
   layers:
   - Default
   - TransparentFX
