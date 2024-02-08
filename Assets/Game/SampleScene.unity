@@ -7322,7 +7322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900462369}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -70.3915, y: 56.2679, z: 0}
+  m_LocalPosition: {x: -73.9, y: 57.95, z: 0}
   m_LocalScale: {x: 1.3882071, y: 0.8380935, z: 1.0619}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12931,6 +12931,7 @@ GameObject:
   - component: {fileID: 1425251544}
   - component: {fileID: 1425251545}
   - component: {fileID: 1425251546}
+  - component: {fileID: 1425251547}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -13137,6 +13138,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displaytext: {fileID: 1101504209}
   time: 3
+--- !u!114 &1425251547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425251537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9265770600898e54aacabd6f20d0ccb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageamount: 10
+  attackRange: 5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1434664478 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7286870094121726599, guid: a7535c7d6d819344ba693faf0eed0b96, type: 3}
@@ -16042,7 +16060,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693254774}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
