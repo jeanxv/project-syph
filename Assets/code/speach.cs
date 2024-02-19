@@ -17,7 +17,7 @@ public class TextOnCollision : MonoBehaviour
 
         if (collision.CompareTag("plush")) // Check if the collider belongs to the player
         {
-            displaytext.text = "20 year iv been trap in here"; // Change the text
+            displaytext.text = "WHY IS..THIS HERE";
             displaytext.gameObject.SetActive(true); // Make the text visible
             isDisplay = true;
 

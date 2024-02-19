@@ -13,6 +13,7 @@ public class NewBehaviourScript1 : MonoBehaviour
     public Animator animator;
     public collectable cl;
     // Update is called once per frame
+    
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -22,9 +23,15 @@ public class NewBehaviourScript1 : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("speed", movement.sqrMagnitude);
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Space");
+        }
+
+
     }
 
-     void FixedUpdate()
+    void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 

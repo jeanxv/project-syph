@@ -7,9 +7,7 @@ public class playerattack : MonoBehaviour
 
 {
     private GameObject attackArea = default;
-
     private bool attacking = false;
-
     private float timeToAttack = 0.25f;
     private float timer = 0f;
     private BoxCollider box;
@@ -26,10 +24,12 @@ public class playerattack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("update");
 
-        if (Input.GetKeyUp(KeyCode.Space))
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("space pressed");
             box.enabled = !box.enabled;
             
         }
@@ -47,6 +47,7 @@ public class playerattack : MonoBehaviour
             
         }
     }
+
     private void Attack ()
     {
         attacking = true;
