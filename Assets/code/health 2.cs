@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class health2 : MonoBehaviour
 {
@@ -12,10 +13,10 @@ public class health2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-     
-    public void Damage (int amount)
+
+    public void Damage(int amount)
     {
         if (amount < 0)
         {
@@ -32,13 +33,13 @@ public class health2 : MonoBehaviour
 
     public void Heal(int amount)
     {
-        if (amount<0)
+        if (amount < 0)
         {
             throw new System.ArgumentOutOfRangeException("cannot have negavtive healing");
         }
 
         bool wouldBeOverMaxHealth = health + amount < MAX_HEALTH;
-       
+
         if (wouldBeOverMaxHealth)
         {
             this.health = MAX_HEALTH;
@@ -50,16 +51,23 @@ public class health2 : MonoBehaviour
             this.health += amount;
         }
 
-        
-       
-       
+
+
+
     }
-        private void Die()
+    private void Die()
+    {
+        Debug.Log("I am dead!");
+        Destroy(gameObject);
+        if (health <= 0)
         {
-            Debug.Log("I am dead!");
-            Destroy(gameObject);
+
+          SceneManager.LoadSceneAsync(2);
+
         }
 
 
 
-} 
+
+    }
+}
