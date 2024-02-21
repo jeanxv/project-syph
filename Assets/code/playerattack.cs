@@ -9,7 +9,7 @@ public class playerattack : MonoBehaviour
     private GameObject attackArea = default;
     private bool attacking = false;
     private float timeToAttack = 0.25f;
-    private float timer = 0f;
+    private float timer = 1f;
     private BoxCollider box;
 
     // Start is called before the first frame update
