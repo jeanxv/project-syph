@@ -10,15 +10,16 @@ public class playerattack : MonoBehaviour
     private bool attacking = false;
     private float timeToAttack = 0.25f;
     private float timer = 1f;
-    private BoxCollider box;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        attackArea = transform.GetChild(0).gameObject; 
-        box = GetComponent<BoxCollider>();
-       
         
+        attackArea = transform.GetChild(0).gameObject; 
+        
+
+       
     }
 
     // Update is called once per frame
@@ -27,25 +28,14 @@ public class playerattack : MonoBehaviour
         Debug.Log("update");
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            Debug.Log("space pressed");
-            box.enabled = !box.enabled;
+            Attack();
+            Debug.Log("attack");
+            
             
         }
-        if (attacking)
-        {
-            timer += Time.deltaTime;
-             
-            if (timer >=timeToAttack)
-            {
-                timer = 1;
-
-                attacking = false;
-                
-            }
-            
-        }
+       
     }
 
     private void Attack ()

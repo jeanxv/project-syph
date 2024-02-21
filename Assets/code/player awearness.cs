@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class ActivateNavMeshAgent : MonoBehaviour
 {
     public Transform Player; // Reference to the player GameObject
-    public float activationDistance = 5f; // Distance at which the NavMeshAgent should activate
+    public float activationDistance = 10f; // Distance at which the NavMeshAgent should activate
 
     private NavMeshAgent navMeshAgent;
     private bool activated = false;
