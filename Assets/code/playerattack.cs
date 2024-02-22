@@ -15,7 +15,7 @@ public class playerattack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        attackArea=GetComponent<GameObject>();
         attackArea = transform.GetChild(0).gameObject; 
         
 
@@ -30,9 +30,9 @@ public class playerattack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Attack();
+            Attack
             Debug.Log("attack");
-            
+            attacking = true;
             
         }
        
