@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class attackArea : MonoBehaviour
 {
-    private int damage = 20;
+    private int damage = 50;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

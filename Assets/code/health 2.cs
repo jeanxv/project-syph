@@ -59,13 +59,7 @@ public class health2 : MonoBehaviour
     {
         Debug.Log("I am dead!");
         Destroy(gameObject);
-        if (health <= 0)
-        {
-
-          SceneManager.LoadSceneAsync(2);
-
-        }
-
+       
 
 
 

@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public int damageamount = 10; // Amount of damage inflicted on the enemy
-    public float attackRange = 2f; // Range of the attack
+    public float attackRange = 5f; // Range of the attack
     public LayerMask enemyLayer; // Layer mask for the enemy
 
     void Update()

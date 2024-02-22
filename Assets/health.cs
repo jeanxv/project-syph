@@ -1,50 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class health : MonoBehaviour
+public class health3: MonoBehaviour
 {
-    public int MaxHealth = 10;
-    public int currentHealth;
+    [SerializeField] private int health = 100;
+    private int MAX_HEALTH = 100;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        currentHealth = 100;
-    }
-    public void Damage (int amaount)
-    {
-        currentHealth -= 20;
-
-        if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
-        
-
-       
-           
-
-
-    } 
     // Update is called once per frame
-    public void Heal(int amaount)
+    void Update()
     {
-        currentHealth += amaount;
-        if (currentHealth > MaxHealth)
-        {
-            currentHealth = MaxHealth;
-        }
-        
 
     }
 
+    public void Damage(int amount)
+    {
+        if (amount < 0)
+        {
+            throw new System.ArgumentOutOfRangeException("Cannot have negavive damage");
+        }
+
+        this.health -= amount;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Heal(int amount)
+    {
+        if (amount < 0)
+        {
+            throw new System.ArgumentOutOfRangeException("cannot have negavtive healing");
+        }
+
+        bool wouldBeOverMaxHealth = health + amount < MAX_HEALTH;
+
+        if (wouldBeOverMaxHealth)
+        {
+            this.health = MAX_HEALTH;
+
+
+        }
+        else
+        {
+            this.health += amount;
+        }
 
 
 
+
+    }
+    private void Die()
+    {
+        Debug.Log("I am dead!");
+        Destroy(gameObject);
+        if (health <= 0)
+        {
+
+           SceneManager.LoadSceneAsync(2);
+
+        }
+
+
+
+
+    }
 }
-
-
-
-
