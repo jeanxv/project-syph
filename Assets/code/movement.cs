@@ -32,13 +32,21 @@ public class NewBehaviourScript1 : MonoBehaviour
         {
             Debug.Log("spacepressed");
             Vector3 pos = new Vector3(41.16f, -25.01f, -20.0f);
-            Camera.main.fieldOfView = 150f;
-            timer= Time.time;
+            Camera.main.fieldOfView = 88f;
+           
             
            
         }
-        
-      
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Debug.Log("spacepressed");
+            Vector3 pos = new Vector3(41.16f, -25.01f, -20.0f);
+            Camera.main.fieldOfView = 43f;
+
+
+
+        }
+
 
     }
 

@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class health2 : MonoBehaviour
+public class health2: MonoBehaviour
 {
     [SerializeField] private int health = 100;
     private int MAX_HEALTH = 100;
@@ -59,8 +59,9 @@ public class health2 : MonoBehaviour
     {
         Debug.Log("I am dead!");
         Destroy(gameObject);
-       
 
+        
+       
 
 
     }
