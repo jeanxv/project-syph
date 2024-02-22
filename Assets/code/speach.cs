@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextOnCollision : MonoBehaviour
+public class SPEECH1 : MonoBehaviour
 {
 
     public Text displaytext;
