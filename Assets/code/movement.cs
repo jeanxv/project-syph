@@ -15,10 +15,14 @@ public class NewBehaviourScript1 : MonoBehaviour
     public Animator animator;
     public collectable cl;
     public Camera cam;
-    private float timer = 3;
-    
+    private float timer;
+    private float sec = 3.0f;
+
     // Update is called once per frame
-    
+    private void Start()
+    {
+        timer -= sec;
+    }
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -30,18 +34,18 @@ public class NewBehaviourScript1 : MonoBehaviour
 
        if(Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("spacepressed");
+            
             Vector3 pos = new Vector3(41.16f, -25.01f, -20.0f);
             Camera.main.fieldOfView = 88f;
-           
+           timer -= Time.deltaTime;
             
            
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+       // else 
         {
-            Debug.Log("spacepressed");
-            Vector3 pos = new Vector3(41.16f, -25.01f, -20.0f);
-            Camera.main.fieldOfView = 43f;
+          //  Debug.Log("spacepressed");
+           // Vector3 pos = new Vector3(41.16f, -25.01f, -20.0f);
+           // Camera.main.fieldOfView = 43f;
 
 
 

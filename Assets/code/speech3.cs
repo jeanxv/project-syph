@@ -15,7 +15,7 @@ private void OnTriggerEnter2D(Collider2D collision)
 {
 
 
-    if (collision.CompareTag("Player")) // Check if the collider belongs to the player
+    if (collision.CompareTag("child")) // Check if the collider belongs to the player
     {
         displaytext.text = "LEAVE ME ALONE";
         displaytext.gameObject.SetActive(true); // Make the text visible
@@ -40,7 +40,7 @@ private void Update()
 }
 private void OnTriggerExit(Collider other)
 {
-    if (other.CompareTag("Player")) // Check if the collider belongs to the player
+    if (other.CompareTag("child")) // Check if the collider belongs to the player
     {
         displaytext.gameObject.SetActive(false); // Hide the text when player exits the collider
         isDisplay = false;

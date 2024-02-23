@@ -17,7 +17,7 @@ public class SPEESH2 : MonoBehaviour
 
         if (collision.CompareTag("FAMILY")) // Check if the collider belongs to the player
         {
-            displaytext.text = "such a ... usless thing ";
+            displaytext.text = "such a .. usless thing ";
             displaytext.gameObject.SetActive(true); // Make the text visible
             isDisplay = true;
 
