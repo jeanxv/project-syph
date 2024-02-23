@@ -16,7 +16,7 @@ public class collectable  : MonoBehaviour
     [SerializeField] private Text itemsText;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("plush"))
+        if(collision.gameObject.CompareTag("items"))
         {
             Destroy(collision.gameObject);
             items++;
